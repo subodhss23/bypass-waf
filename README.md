@@ -38,7 +38,7 @@ Bypass WAF contains the following features:
 
 A description of each feature follows:
 <ol>
-<li>Users can modify the  X-Originating-IP, X-Forwarded-For, X-Remote-IP, X-Remote-Addr headers sent in each request.  This is probably the top bypass technique i the tool.  It isn't unusual for a WAF to be configured to trust itself (127.0.0.1) or an upstream proxy device, which is what this bypass targets.</li>
+<li>Users can modify the  X-Originating-IP, X-Forwarded-For, X-Remote-IP, X-Remote-Addr headers sent in each request.  This is probably the top bypass technique in the tool.  It isn't unusual for a WAF to be configured to trust itself (127.0.0.1) or an upstream proxy device, which is what this bypass targets.</li>
 <li>The "Content-Type" header can remain unchanged in each request, removed from all requests, or by modified to one of the many other options for each request.  Some WAFs will only decode/evaluate requests based on known content types, this feature targets that weakness.</li>
 <li>The "Host" header can also be modified.  Poorly configured WAFs might be configured to only evaluate requests based on the correct FQDN of the host found in this header, which is what this bypass targets.</li>
 <li>The request type option allows the Burp user to only use the remaining bypass techniques on the given request method of "GET" or "POST", or to apply them on all requests.</li>
